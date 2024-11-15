@@ -4,11 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toast Notification or Snack Bar</title>
-    <link rel="stylesheet" href="styl.css" type="text/tailwindcss">
+    <link rel="stylesheet" href="styl.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body class="bg-purple-500 h-screen">
+
+    <div class="container">
+        
+        <div class="p-9 flex items-center gap-4 lg:p-28">
+            <button onclick="showToast(successMsg)" class="bg-black text-white text-sm py-2 px-3 rounded-lg">Success</button>
+            <button onclick="showToast(errorMsg)" class="bg-black text-white text-sm py-2 px-3 rounded-lg">Error</button>
+            <button onclick="showToast(invalidMsg)" class="bg-black text-white text-sm py-2 px-3 rounded-lg">Invalid</button>
+        </div>
+
+        <div id="toastBox" class="absolute bottom-7 right-7 flex items-end flex-col overflow-hidden padd20px"></div>
+
+    </div>
     
 
     <script src="script.js"></script>
